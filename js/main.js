@@ -77,10 +77,10 @@ function render() {
         vertex.y = 20 * Math.sin(i / 10);
       }
     }
-
     particles[i].geometry.verticesNeedUpdate = true;
     particles[i].rotation.x += 0.05;
   }
+
 
   if (!capped) {
     var p1 = makeParticles(params.radius);
@@ -94,7 +94,7 @@ function render() {
 
 function makeParticles(rad) {
   var geometry = new THREE.Geometry();
-  var material = new THREE.PointsMaterial( {color: 0x00ff00} );
+  var material = new THREE.PointsMaterial( {color: 0xdd206c} );
 
   for (var i = 0; i < 2*Math.PI; i += 2*Math.PI / params.count) {
     var vertex = new THREE.Vector3();
